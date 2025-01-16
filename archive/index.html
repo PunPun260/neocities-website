@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html id="webpage">
+    <head>
+        <title>Rep Hideout</title>
+        <link rel="stylesheet" type="text/css" href="https://replay260.neocities.org/style.css">
+    </head>
+    <body class="default">
+        <!-- HEADER SECTION -->
+        <div id="header">
+            <h1>Tawee's Archive</h1>
+        </div>
+
+        <!-- SIDEBAR GROUP -->
+        <div class="sidebar-group">
+            <!-- LEFT SIDEBAR START -->
+            <div id="left-sidebar">
+                <div class="sidebar-content">
+                    <h2>Archive Content</h2>
+                    
+                    <div class="file-manager-sidebar">
+                        <ul class="file-tree">
+                            <li class="folder">
+                                <span class="toggle"> &gt; </span> School
+                            </li>
+                            <ul class="sub-folder">
+                                <li>Math.md</li>
+                                <li>Song2.mp3</li>
+                                <li class="folder">
+                                    <span class="toggle"> &gt; </span> Kill the focking time
+                                </li>
+                                <ul class="sub-folder">
+                                    <li>Drawing.md</li>
+                                    <li>Song2.mp3</li>
+                                </ul>
+                            </ul>
+                        </ul>
+                    </div>  
+                </div>
+            </div>
+
+            <!-- CENTER CONTENT -->
+            <div id="center-sidebar">
+                <h1>About dis</h1>
+                <p>
+                    Hi!! This is where i keep my note and anything here! Enjoy.
+                </p>
+            </div>
+
+            <!-- RIGHT SIDEBAR -->
+            <div id="right-sidebar">
+                <div class="sidebar-content">
+                    <h2>Navigation</h2>
+                    <ol class="nav">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/gallery">Galleries</a>
+                            <ol class="nav">
+                                <li><a href="/gallery/real-live">Real-live</a></li>
+                                <li><a href="/gallery/animation">Animaation</a></li>
+                                <li><a href="/gallery/arts">Arts</a></li>    
+                            </ol>
+                        </li>
+                        <li><a href="/blog">Blog</a></li>
+                        <li><a href="/links">Links</a></li>
+                        <li><a href="/favorite-web">Favorite Webpage</a></li>
+                        <li><a href="/archive">Archive</a></li>
+                        <li><a href="/knowledge">Knowledge</a></li>
+                        <li><a href="/memes">Memes</a></li>
+                        <li><a href="/dev-logs">Dev Log</a></li>
+                    </ol>
+                    <img class="dividergif" src="https://replay260.neocities.org/image/decor/line.gif">
+                    <p><b>Website hits</b></p>
+                    <!-- FC2 Counter  Starts here -->
+                    <script language="javascript" type="text/javascript" src="//counter1.fc2.com/counter.php?id=40092203&main=1"></script><noscript><img src="//counter1.fc2.com/counter_img.php?id=40092203&main=1" /></noscript>
+                    <!-- FC2 Counter  Ends here -->
+                    <div class="imgcontainer">
+                      <a href="https://info.flagcounter.com/wnVS"><img src="https://s01.flagcounter.com/count/wnVS/bg_FFFFFF/txt_000000/border_CCCCCC/columns_5/maxflags_35/viewers_0/labels_1/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
+                    </div>
+                    <p>
+                        <i>Counting since 10/12/2024</i>
+                        <br>
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            document.querySelectorAll('.folder').forEach((folder, index) => {
+                const toggle = folder.querySelector('.toggle');
+                const subFolder = document.querySelectorAll('.sub-folder')[index];
+            
+                const toggleSubFolder = () => {
+                    // Toggle visibility of sub-folder
+                    const isExpanded = subFolder.style.display === 'block';
+                    subFolder.style.display = isExpanded ? 'none' : 'block';
+            
+                    // Add/remove the "open" class for rotation effect
+                    folder.classList.toggle('open', !isExpanded);
+                };
+            
+                // Listen for click events on the folder or the toggle
+                folder.addEventListener('click', toggleSubFolder);
+                toggle.addEventListener('click', (event) => {
+                    event.stopPropagation(); // Prevent the folder click from triggering when the toggle is clicked
+                    toggleSubFolder();
+                });
+            });
+        </script>
+    </body>
+</html>
